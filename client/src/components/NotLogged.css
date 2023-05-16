@@ -1,0 +1,8 @@
+.notlogged-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.notlogged-container > * {
+  margin-bottom: 1rem;
+}
