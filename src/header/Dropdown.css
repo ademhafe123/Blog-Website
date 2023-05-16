@@ -1,0 +1,27 @@
+.dropdown-navList-item {
+  list-style: none;
+}
+
+.dropdown-container {
+  background-color: #fff;
+  border: 1px solid #617a55;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5%;
+  position: absolute;
+  top: 12%;
+  right: 10%;
+}
+
+.dropdown-btn {
+  background-color: #617a55;
+  color: #fff8d6;
+  text-align: center;
+  border-style: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  height: 2rem;
+  font-size: 1rem;
+}
