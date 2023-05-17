@@ -1,0 +1,64 @@
+.form-container {
+  max-width: fit-content;
+  margin: 2rem auto;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: #fff8d6;
+  border: 1px solid #617a55;
+  border-radius: 10px;
+}
+
+.form-title {
+  font-family: "ubuntu", "sans-serif";
+  color: #617a55;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  font-size: 1.3rem;
+}
+
+.input {
+  height: 2rem;
+  padding: 3px 8px;
+  border-style: none;
+  outline: 1px solid #617a55;
+  font-size: 1.3rem;
+}
+.input:hover {
+  transform: translateY(-2px);
+}
+
+.input:focus {
+  outline: 2px solid #617a55;
+}
+
+.form-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-btn {
+  height: 2.5rem;
+  padding: 3px 6px;
+  text-align: center;
+  width: 50%;
+  background-color: #617a55;
+  color: #fff8d6;
+  font-size: 1.3rem;
+  border-style: none;
+  border: 1px solid #a4d0a4;
+  border-radius: 5px;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
