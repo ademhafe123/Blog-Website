@@ -1,0 +1,59 @@
+.blog-card {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #617a55;
+  border: 1px solid #a4d0a4;
+  border-radius: 5px;
+}
+
+.blog-card-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 60px;
+  border-radius: 50%;
+  display: inline;
+}
+
+.profile-name {
+  display: inline;
+  font-weight: 300;
+  color: #f7e1ae;
+  margin-left: 1rem;
+}
+
+.blog-card-title {
+  margin: 1rem 0;
+  font-weight: 300;
+  color: #f7e1ae;
+}
+
+.blog-card-content {
+  color: #fff8d6;
+}
+
+.blog-card-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.blog-card-btn {
+  font-family: "ubuntu", "sans-serif";
+  color: #617a55;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 5px 8px;
+  margin-right: 1rem;
+  text-align: center;
+  border-style: none;
+  background-color: #fff8d6;
+}
+
+.blog-card-btn:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  background-color: #f7e1ae;
+}
