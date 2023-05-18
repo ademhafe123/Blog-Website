@@ -62,3 +62,13 @@
   cursor: pointer;
   transform: translateY(-3px);
 }
+
+.empty-field {
+  color: red;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.input-label-taken {
+  color: red;
+}
