@@ -39,7 +39,9 @@ app.post("/user/register", (req, res) => {
               .db("BlogIT")
               .collection("users")
               .insertOne(user)
-              .then(() => res.send("Added new user"));
+              .then(() => {
+                res.send({ name, email });
+              });
           }
         });
       }
@@ -64,8 +66,9 @@ app.post("/user/login", (req, res) => {
       if (!response) res.send("Email not in use");
       // CKECK IF PASSWORDS MATCH
       else {
+        const name = response.name;
         bcrypt.compare(user.password, response.password).then((result) => {
-          if (result) res.send("Logged in");
+          if (result) res.send({ name, email });
           else res.send("Password incorrect");
         });
       }

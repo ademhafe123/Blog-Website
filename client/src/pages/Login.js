@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import { AuthContext } from "../App";
 import "./Register.css";
 
 const Login = () => {
@@ -11,6 +12,7 @@ const Login = () => {
   const [isEmailActive, setIsEmailActive] = useState(true);
   const [isPasswordCorrect, setIsPasswordCorrect] = useState(true);
   const navigate = useNavigate();
+  const { setCurrentUser } = useContext(AuthContext);
 
   const onUserLogin = (event) => {
     event.preventDefault();
@@ -29,9 +31,9 @@ const Login = () => {
           setIsEmailActive(true);
           setIsPasswordCorrect(false);
         } else {
-          console.log(response.data);
           setEmail("");
           setPassword("");
+          setCurrentUser(response.data);
           navigate("/");
         }
       });

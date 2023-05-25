@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import { AuthContext } from "../App";
 import "./Register.css";
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
   const [isFieldEmpty, setIsFieldEmpty] = useState(false);
   const [isEmailTaken, setIsEmailTaken] = useState(false);
   const navigate = useNavigate();
+  const { setCurrentUser } = useContext(AuthContext);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -30,11 +32,12 @@ const Register = () => {
             console.log(response.data);
             setIsEmailTaken(true);
           } else {
-            console.log(response.data);
+            console.log("Registered a new user!");
             setIsEmailTaken(false);
             setEmail("");
             setName("");
             setPassword("");
+            setCurrentUser(response.data);
             navigate("/");
           }
         })
