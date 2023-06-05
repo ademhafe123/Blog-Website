@@ -75,6 +75,21 @@ app.post("/user/login", (req, res) => {
     });
 });
 
+//
+// ADD A NEW BLOG
+//
+app.post("/blog/add", (req, res) => {
+  const author = req.body.author;
+  const title = req.body.title;
+  const content = req.body.content;
+  const blog = { title, content };
+  client
+    .db("BlogIT")
+    .collection("blogs")
+    .insertOne(blog)
+    .then(() => res.send(`${author.name} added a new blog`));
+});
+
 client.connect().then(() => {
   app.listen(7000, () =>
     console.log("Server is on port 7000, and connected to database")

@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import NotLogged from "./components/NotLogged";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import AddBlog from "./pages/AddBlog";
 
 import avatar1 from "./images/tarik-avatar.jpg";
 import avatar2 from "./images/adem-avatar.jpg";
@@ -22,7 +23,10 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/add-blog" element={<NotLogged />} />
+            <Route
+              path="/add-blog"
+              element={currentUser === null ? <NotLogged /> : <AddBlog />}
+            />
             <Route path="/profile" element={<NotLogged />} />
             <Route path="/blogid" element={<Blog blog={DUMMY_BLOGS[0]} />} />
             <Route path="/sign-in" element={<Login />} />

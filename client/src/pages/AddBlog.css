@@ -1,0 +1,14 @@
+.add-blog {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input-area {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.add-blog-title {
+  text-align: center;
+  margin-top: 1rem;
+}
