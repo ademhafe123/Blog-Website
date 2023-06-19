@@ -7,24 +7,6 @@
   border-radius: 5px;
 }
 
-.blog-card-header {
-  display: flex;
-  align-items: center;
-}
-
-.profile-pic {
-  width: 60px;
-  border-radius: 50%;
-  display: inline;
-}
-
-.profile-name {
-  display: inline;
-  font-weight: 300;
-  color: #f7e1ae;
-  margin-left: 1rem;
-}
-
 .blog-card-title {
   margin: 1rem 0;
   font-weight: 300;
@@ -37,7 +19,13 @@
 
 .blog-card-btn-container {
   display: flex;
-  justify-content: flex-end;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.blog-card-name {
+  color: #ffff;
+  font-weight: 300;
 }
 
 .blog-card-btn {

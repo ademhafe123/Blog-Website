@@ -11,13 +11,10 @@ const BlogCard = (props) => {
 
   return (
     <div className="blog-card">
-      <div className="blog-card-header">
-        <img src={props.imgUrl} alt="profile-pic" className="profile-pic" />
-        <h3 className="profile-name">{props.name}</h3>
-      </div>
       <h2 className="blog-card-title">{props.title}</h2>
       <p className="blog-card-content">{props.content}</p>
       <div className="blog-card-btn-container">
+        <h3 className="blog-card-name">Written by: {props.name}</h3>
         <button className="blog-card-btn" onClick={buttonHandler}>
           Read Blog!
         </button>

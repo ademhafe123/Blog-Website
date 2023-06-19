@@ -82,12 +82,29 @@ app.post("/blog/add", (req, res) => {
   const author = req.body.author;
   const title = req.body.title;
   const content = req.body.content;
-  const blog = { title, content };
+  const blog = { title, content, author: author.name };
   client
     .db("BlogIT")
     .collection("blogs")
     .insertOne(blog)
     .then(() => res.send(`${author.name} added a new blog`));
+});
+
+//
+// GET ALL THE BLOGS
+//
+app.get("/home", (req, res) => {
+  client
+    .db("BlogIT")
+    .collection("blogs")
+    .find({})
+    .toArray()
+    .then((response) => {
+      console.log("\n\n\n AAA");
+      console.log(response);
+      res.send(response);
+    })
+    .catch((err) => console.log(err));
 });
 
 client.connect().then(() => {
